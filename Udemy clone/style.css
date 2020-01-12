@@ -1,0 +1,16 @@
+.big-banner {
+    background-image: url(images/jk.jpg);
+    background-size: 100%;
+}
+
+.fresh-content {
+    background: linear-gradient(-45deg, #ec5252, #6e1a52);
+    /* background: #8A2387;
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); */
+}
+
+.imag {
+    background-image: url(images/jk.jpg);
+    /* background-size: 100%; */
+}
