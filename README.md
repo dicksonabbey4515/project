@@ -12,7 +12,8 @@ project commence 27th December,2019
 [difftool]
 	prompt = false
 	
-____________________________________________________________
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 [merge]
 	tool = meld
 [mergetool "meld"]
