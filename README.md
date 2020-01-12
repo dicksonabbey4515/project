@@ -11,6 +11,8 @@ project commence 27th December,2019
 	path = C:/Program Files (x86)/Meld/meld/Meld.exe
 [difftool]
 	prompt = false
+	
+____________________________________________________________
 [merge]
 	tool = meld
 [mergetool "meld"]
