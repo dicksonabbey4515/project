@@ -1,0 +1,32 @@
+h3{
+    text-align-last: center;
+    font-family: "roboto",sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+h4{
+    font-family: "roboto",sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+img {
+    postion: relative;
+}
+
+.gallery{
+    transition: width 2s,height 2s;
+    transition-delay: 0.005s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+img{
+    margin-right: 5px;
+}
+
+img:hover{
+    width:350px;
+    height:350px;border-radius: 20px;
+    transition:all 0.5s ease-in;
+}

@@ -1,0 +1,142 @@
+https://docs.google.com/forms/d/e/1FAIpQLScfmvK-cIoDE1ACyf2gabtSoRPe3Dqh9AC8yK6yBdXvs1rdZw/formResponse?embedded=true
+
+
+
+
+
+//ABBBEY DICKSON AKWETEY
+//SATURDAY 02ND MARCH,2019.
+//SHELL SORTING ALGORITM
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    //Defined variables
+    int totalNum=0;
+
+    //Taking number of numbers that are to be sorted
+    cout << "Please how many are to be sorted => " ;
+    cin >> totalNum;
+
+    //Defined variables
+    int myArray[totalNum];
+    int shell[30];
+
+
+    //Taking user inputs into an array
+    cout<<"\nEnter numbers :"<<endl;
+    for(int i=1; i<=totalNum ; i++){
+        cout<<"["<<i<<"] => ";
+        cin>>myArray[i];
+    }
+
+
+    //Using the formula (2^x)*(3^y) numbers into keep and then validating them into an array shell[]
+    int i=0;int keep=0;int sizeOf=0;
+    for(int x=0;x<totalNum; x++){
+            //if(keep>totalNum){break;}else {continue;}
+        for(int y=0; y<totalNum; y++){
+            keep = pow(2,x)*pow(3,y);
+            //cout<<"keep = "<<keep<<"\t"<<"x= "<<x<<"\t"<<"y= "<<y<<endl;
+            if(keep <= totalNum){
+                shell[i]= keep;
+        //cout<<"keep =>"<<keep<<"\t"<<"shell => "<<shell[i]<<endl;
+                i++;
+                sizeOf+=1;
+            }
+
+         }
+    }
+
+    for(int q=1;q<=sizeOf;q++){
+        cout<<"\nUnsorted order  => "<<shell[q];
+    }cout<<"\n";
+
+    int box = 0;
+    for(int pass=1; pass <= (sizeOf-1); pass++){
+       for(int comps=1; comps <= (sizeOf - pass) ; comps++){
+          if( shell[comps] >  shell[comps+1]){
+              box = shell[comps];
+              shell[comps] = shell[comps+1];
+              shell[comps+1] = box;
+          }
+       }
+    }
+
+    for(int q=1;q<=sizeOf;q++){
+        cout<<"\nsorted order  => "<<shell[q];
+    }cout<<"\n";
+
+    //Checks if numbers are in Descending order
+    for(int i=(sizeOf-1); i >= 0; i--){
+        cout<<"\nDescending order  => "<<shell[i];
+    }
+ cout<<"\n";
+    //Reducing the numbers by 0.65
+    sizeOf *=0.65;int count = 0;int newShell[sizeOf];int put=0; int z=0;
+    for(int i=(sizeOf-1); i >= 0; i--){
+        put = shell[i];
+        cout<<"\nPieceOfDescending => "<<shell[i];
+        count+=1;
+
+       newShell[z] = put;
+       //cout<<"\nnewShell ["<<i<<"] = "<<newShell[i];
+        z++;
+    }
+ cout<<"\n";
+    for (int p=0;p< count;p++){
+
+    cout<<"\nnewShell ["<<p<<"] = "<<newShell[p];
+    }
+
+//cout<<" Size of =>"<<sizeOf<<"count of=>"<<count<<endl;
+    //Using the derived numbers to sort numbers according to the shell procedure
+    int index = 0;int contain = 0;
+    for(int usingNum=0; usingNum<sizeOf; usingNum++){
+        for(int comps=0; comps<totalNum; comps++){
+
+
+            index = newShell[usingNum];
+            //cout<<"Index > "<<index;
+            if(myArray[comps] > myArray[index]){
+                contain = myArray[comps];
+                myArray[comps] = myArray[index];
+                myArray[index] = contain;
+            }
+        }
+        cout<<"\nUsing "<<index<<" : ";
+    for(int x=0; x<totalNum; x++){
+        cout<<myArray[x]<<" ,";
+    }
+    }
+
+    cout<<"\nSorted array => ";
+    for(int x=0; x<totalNum; x++){
+        cout<<myArray[x]<<" ,";
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
