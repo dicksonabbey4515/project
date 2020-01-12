@@ -1,0 +1,9 @@
+[user]
+	name = Dickson Abbey
+	email = dicksonabbey4515@gmail.com
+[diff]
+	tool = meld
+[difftool "meld"]
+	path = C:/Program Files (x86)/meld/Meld.exe
+[difftool]
+	prompt = false
